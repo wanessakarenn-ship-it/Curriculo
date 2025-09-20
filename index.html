@@ -90,44 +90,20 @@
         </section>
 
         <!-- Seção de Habilidades com Gráfico -->
-      const ctx = document.getElementById('skillsChart').getContext('2d');
-            const skillsChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: [
-                        'Gestão de Tráfego (Google & Meta Ads)', 
-                        'Estratégias de Marketing e Funis', 
-                        'Análise de Dados (Analytics & Looker)', 
-                        'Ferramentas de Automação (RD Station)',
-                        'Gestão de Tags (GTM)'
-                    ],
-                    datasets: [{
-                        label: 'Nível de Proficiência',
-                        data: [95, 90, 85, 80, 88],
-                        backgroundColor: [
-                            'rgba(129, 178, 154, 0.7)',
-                            'rgba(224, 122, 95, 0.7)',
-                            'rgba(61, 64, 91, 0.7)',
-                            'rgba(244, 202, 112, 0.7)',
-                            'rgba(131, 131, 131, 0.7)'
-                        ],
-                        borderColor: [
-                            '#81B29A',
-                            '#E07A5F',
-                            '#3D405B',
-                            '#F4CA70',
-                            '#838383'
-                        ],
-                        borderWidth: 2,
-                        borderRadius: 5,
-                    }]
-                },
+        <section id="skills" class="mb-24">
+            <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Especialidades e Proficiência</h3>
+            <div class="p-6 bg-white rounded-2xl shadow-xl border border-gray-100">
+                <div class="chart-container">
+                    <canvas id="skillsChart"></canvas>
+                </div>
+            </div>
+        </section>
 
         <!-- Seção de Experiência Profissional (Linha do Tempo) -->
         <section id="experience" class="mb-24">
             <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Experiência Profissional</h3>
             <div class="relative max-w-3xl mx-auto border-l-2 border-[#81B29A]/50 pl-8 md:pl-12">
-                
+                                
                 <div class="mb-12 timeline-item p-6 bg-white rounded-xl shadow-md border border-gray-100">
                     <p class="font-bold text-lg text-[#3D405B]">Gestora de Tráfego Pago</p>
                     <p class="font-medium text-md text-gray-700">Cia g3</p>
@@ -309,4 +285,3 @@
 </body>
 
 </html>
-
