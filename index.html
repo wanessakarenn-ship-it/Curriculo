@@ -90,15 +90,38 @@
         </section>
 
         <!-- Seção de Habilidades com Gráfico -->
-        <section id="skills" class="mb-24">
-            <h3 class="text-3xl font-bold text-center mb-12 text-[#3D405B]">Principais Especialidades</h3>
-            <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-                Esta visualização destaca minhas áreas de maior proficiência e as ferramentas que domino para gerar resultados. Passe o mouse sobre as barras para ver a pontuação de cada competência.
-            </p>
-            <div class="chart-container p-6 bg-white rounded-2xl shadow-xl border border-gray-100">
-                <canvas id="skillsChart"></canvas>
-            </div>
-        </section>
+      const ctx = document.getElementById('skillsChart').getContext('2d');
+            const skillsChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        'Gestão de Tráfego (Google & Meta Ads)', 
+                        'Estratégias de Marketing e Funis', 
+                        'Análise de Dados (Analytics & Looker)', 
+                        'Ferramentas de Automação (RD Station)',
+                        'Gestão de Tags (GTM)'
+                    ],
+                    datasets: [{
+                        label: 'Nível de Proficiência',
+                        data: [95, 90, 85, 80, 88],
+                        backgroundColor: [
+                            'rgba(129, 178, 154, 0.7)',
+                            'rgba(224, 122, 95, 0.7)',
+                            'rgba(61, 64, 91, 0.7)',
+                            'rgba(244, 202, 112, 0.7)',
+                            'rgba(131, 131, 131, 0.7)'
+                        ],
+                        borderColor: [
+                            '#81B29A',
+                            '#E07A5F',
+                            '#3D405B',
+                            '#F4CA70',
+                            '#838383'
+                        ],
+                        borderWidth: 2,
+                        borderRadius: 5,
+                    }]
+                },
 
         <!-- Seção de Experiência Profissional (Linha do Tempo) -->
         <section id="experience" class="mb-24">
@@ -286,3 +309,4 @@
 </body>
 
 </html>
+
